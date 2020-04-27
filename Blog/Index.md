@@ -45,3 +45,8 @@ The View:
 The Controller:
 
  ![Basic Controller](/Blog/Images/pdfController.png)
+ 
+ When you load up the project, all this will do is place a link on the homepage that a user can click. When the user clicks the link Rotativa goes away and reads the website and conerts it to a PDF which then downloads on to your computer. For this example, the PDF will download with the name `OwainCodes.PDF`. We now have Rotativa working and it's time to make it work with some Umbraco content.
+ 
+ ## Umbraco Content and Rotativa PDF
+ 
