@@ -44,4 +44,4 @@ The View:
 
 The Controller:
 
- 
+ ![Basic Controller](/Blog/Images/pdfController.png)
