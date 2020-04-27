@@ -38,7 +38,9 @@ This will demonstrate that Rotativa is installed correctly and generating PDFs.
 
 The View:
 
-[Blog/Images/pdfView.png]
+
+![Basic View](/Blog/Images/pdfView.png)
+
 
 The Controller:
 
