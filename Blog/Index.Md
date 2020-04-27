@@ -36,5 +36,10 @@ So we have Umbraco installed and Rotativa installed. Now we need to hook it all 
 Let's start by making an external website in to a PDF. 
 This will demonstrate that Rotativa is installed correctly and generating PDFs.
 
+The View:
+
+
+
+The Controller:
 
  
