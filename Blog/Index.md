@@ -53,6 +53,11 @@ The Controller:
  ## Umbraco Content and Rotativa PDF
  
 My plan here is to make what I call a Content Block. It's a Nested Content element which I will drop on to a page. This makes the element optional and I can place it on any page that I want. 
-The first thing I need to do is setup my Nested Content element within Umbraco. In the backoffice I've created two folders, one for my compositions and another for my Content Blocks. 
+The first thing I need to do is setup my Nested Content element within Umbraco. In the backoffice I've created two folders within my Document Type folder, which can be found under Settings, one folder for my compositions and another for my Content Blocks.This isn't required but it can help with keeping things organised, especially as your site grows in size.  
 
+ ![ContentBlocksCompositions](/Blog/Images/contentBlocksCompositions.jpg)
+ 
+ You need to create your Nested Content Element (Content Block) first, because without it, you can't add anything to the Nested Content property editor. The composition Page Content has the Nested Content property editor on it and that's it. The Nested Content Property Editor just now only has 1 element setup on it, the PDF download button element.
+
+I then add the composition Page Content to my Home Document Type. 
 
