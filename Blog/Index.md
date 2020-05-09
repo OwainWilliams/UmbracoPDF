@@ -57,7 +57,16 @@ The first thing I need to do is setup my Nested Content element within Umbraco. 
 
  ![ContentBlocksCompositions](/Blog/Images/contentBlocksCompositions.jpg)
  
- You need to create your Nested Content Element (Content Block) first, because without it, you can't add anything to the Nested Content property editor. The composition Page Content has the Nested Content property editor on it and that's it. The Nested Content Property Editor just now only has 1 element setup on it, the PDF download button element.
+ You need to create your Nested Content Element (Content Block) first, because without it, you can't add anything to the Nested Content property editor. The composition `Page Content` has the Nested Content property editor on it and that's it. The Nested Content Property Editor just now only has one element setup on it, the PDF download button element. 
 
-I then add the composition Page Content to my Home Document Type. 
+I then add the composition `Page Content` to my Home Document Type. 
 
+ ![HomeDocumentType](/Blog/Images/HomeDocumentType.jpg)
+ 
+We are almost there. We just need to wire this all up with some code. 
+Obviously you can add more elements to this page over time and I'll add some more later in this tutorial to demonstrate the PDF creation but just now, all I want to do is make sure my element is displaying on the homepage correctly.
+
+Here is how my Homepage now looks with everything setup.
+
+
+With the backoffice now setup. I can build out my views.
