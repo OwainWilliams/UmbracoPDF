@@ -28,6 +28,8 @@ I have two projects within my Visual Studio Solution. UmbracoPDF and UmbracoPDF.
 `System.Web.Mvc`
 `Rotativa`
 
+I have also added `Umbraco.ModelsBuilder.Embedded` because I have moved the default Models location from the main project to my `.Core` project so that I can use the models with my controllers. 
+
 # How will we create PDFs?
 I used [Rotativa](https://github.com/webgio/Rotativa) 1.7.3, which is a free nuget package which can be used in ASP.net MVC projects. When it's installed, it needs to be in the UmbracoPDF project. There is a reason for this which I'll explain in a bit.  
  
@@ -50,7 +52,7 @@ The Controller:
  
  ## Umbraco Content and Rotativa PDF
  
-My plan here is to make what I call a Content Block. It's a Nested Content element which I will drop on to a page and if that Content Block is on the page, I can PDF it. 
+My plan here is to make what I call a Content Block. It's a Nested Content element which I will drop on to a page. This makes the element optional and I can place it on any page that I want. 
+The first thing I need to do is setup my Nested Content element within Umbraco. In the backoffice I've created two folders, one for my compositions and another for my Content Blocks. 
 
-Here are the steps I'll take to make this Content Block. 
-* Add a new composition which I will use on all pages within the website. This will be called Page Content. The Page Content section will have a Nested Content picker. 
+
