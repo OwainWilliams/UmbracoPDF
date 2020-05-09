@@ -68,5 +68,17 @@ Obviously you can add more elements to this page over time and I'll add some mor
 
 Here is how my Homepage now looks with everything setup.
 
+ ![HomeDocumentType](/Blog/Images/ContentBlocksDemo.gif)
 
-With the backoffice now setup. I can build out my views.
+With the backoffice now setup. I can build out my Views.
+
+I need 3 files setup. 
+* `Home` view
+* `ContentBlocks` view
+* `PDFDownloadButton` view
+
+The `Home`view calls the `ContentBlocks` view and the `ContentBlocks` view call the `PDFDownloadButton` view. 
+The reason for this is because the Home view has it's own models and so does the PDFDownloadButton view. I can't convert from one model type to another without going through the ContentBlocks view, which has a generic type set on it.
+
+Here is the code: 
+
