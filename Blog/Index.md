@@ -99,6 +99,7 @@ This reads the text that is entered in the backoffice and displays it as a link 
 
 ![Testing Nested Content](/Blog/Images/basicNestedContentTest.jpg)
 
+Success, we have the link that we created to test the PDF functionality and now we have the link that is created from Nested Content from the backoffice. The final step is to hook the two together. A link that creates a PDF, controlled by the backoffice.
 
 
 Code screenshots are by https://carbon.now.sh/
