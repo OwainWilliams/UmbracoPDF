@@ -46,7 +46,11 @@ The Controller:
 
  ![Basic Controller](/Blog/Images/pdfController.png)
  
- When you load up the project, all this will do is place a link on the homepage that a user can click. When the user clicks the link Rotativa goes away and reads the website and conerts it to a PDF which then downloads on to your computer. For this example, the PDF will download with the name `OwainCodes.PDF`. We now have Rotativa working and it's time to make it work with some Umbraco content.
+ When you load up the project, all this will do is place a link on the homepage that a user can click. When the user clicks the link Rotativa goes away and reads the website and converts it to a PDF which then downloads on to your computer. For this example, the PDF will download with the name `OwainCodes.PDF`. We now have Rotativa working and it's time to make it work with some Umbraco content.
  
  ## Umbraco Content and Rotativa PDF
  
+My plan here is to make what I call a Content Block. It's a Nested Content element which I will drop on to a page and if that Content Block is on the page, I can PDF it. 
+
+Here are the steps I'll take to make this Content Block. 
+* Add a new composition which I will use on all pages within the website. This will be called Page Content. The Page Content section will have a Nested Content picker. 
