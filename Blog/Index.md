@@ -82,3 +82,12 @@ The reason for this is because the Home view has it's own models and so does the
 
 Here is the code: 
 
+Home.cshtml
+![Home View](/Blog/Images/HomeView.png)
+
+ContentBloack.cshtml
+![DisplayContentBlock](/Blog/Images/DisplayContentBlock.png)
+
+
+
+Code screenshots are by https://carbon.now.sh/
