@@ -85,8 +85,19 @@ Here is the code:
 Home.cshtml
 ![Home View](/Blog/Images/HomeView.png)
 
-ContentBloack.cshtml
+As you can see from the code above, I have placed my `DisplayContentBlock.cshtml` in to a new folder called `ContentBlocks`. 
+
+DisplayContentBlocks.cshtml
 ![DisplayContentBlock](/Blog/Images/DisplayContentBlock.png)
+
+This switch statement will grow over time but by keeping everything in this one file, I can add as many elements as I like to any page on my site. This one just calls the `PDFDownloadButton` which is also saved within the ContentBlocks folder.
+
+PDFDownloadButton.cshtml
+![Display Download Button](/Blog/Images/PDFDownloadButton.png)
+
+This reads the text that is entered in the backoffice and displays it as a link on the frontend. Just now, it doesn't have a `href` assigned to it, all I want just now is for the text to display on the frontend. 
+
+![Testing Nested Content](/Blog/Images/basicNestedContentTest.jpg)
 
 
 
