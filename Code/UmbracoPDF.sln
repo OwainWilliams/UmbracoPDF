@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoPDF", "UmbracoPDF\UmbracoPDF.csproj", "{A2D15C21-260E-4341-A3C6-2DC60EA530BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoPDF.Core", "UmbracoPDF.Core\UmbracoPDF.Core.csproj", "{629DA2C8-3180-430F-8EFF-EEF77D8D83A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2D15C21-260E-4341-A3C6-2DC60EA530BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D15C21-260E-4341-A3C6-2DC60EA530BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D15C21-260E-4341-A3C6-2DC60EA530BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D15C21-260E-4341-A3C6-2DC60EA530BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{629DA2C8-3180-430F-8EFF-EEF77D8D83A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629DA2C8-3180-430F-8EFF-EEF77D8D83A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629DA2C8-3180-430F-8EFF-EEF77D8D83A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629DA2C8-3180-430F-8EFF-EEF77D8D83A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B070359A-79B1-471F-8EAD-493083899303}
+	EndGlobalSection
+EndGlobal

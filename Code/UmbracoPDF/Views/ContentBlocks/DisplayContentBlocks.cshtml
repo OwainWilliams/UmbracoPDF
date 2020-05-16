@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IEnumerable<IPublishedElement>>
+
+@if(Model != null && Model.Any())
+{
+    foreach (var contentBlock in Model)
+    {
+        switch(contentBlock.ContentType.Alias)
+        {
+            case PDfdownloadButton.ModelTypeAlias:
+                @Html.Partial("ContentBlocks/PDFDownloadButton", new PDfdownloadButton(contentBlock))
+                break;
+
+            case RichtextEditor.ModelTypeAlias:
+                @Html.Partial("ContentBlocks/RichtextEditor", new RichtextEditor(contentBlock))
+                break;
+        }
+    }
+}

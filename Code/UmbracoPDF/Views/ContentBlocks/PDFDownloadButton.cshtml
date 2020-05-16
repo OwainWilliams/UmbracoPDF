@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<PDfdownloadButton>
+
+@{
+	Layout = null;
+
+    var linkText = Model.LinkText;
+    var saveAsName = "TEST";
+   
+}
+    <input type="button" id="btnSendData" value="Send Data" onclick="DoSendData()" />
+
+
+    <a href="@Url.Action("GeneratePDF", "PDF", new { filename = saveAsName })">@linkText</a>
+
+    <script>
+
+function DoSendData()
+{
+            var divHtml = $('#mainContent').text()
+
+            $.ajax({
+                url: "/",
+                data: { divHtml },
+                method: 'POST',
+                success: function (data) { alert(data); }
+            });
+
+}
+
+    </script>
