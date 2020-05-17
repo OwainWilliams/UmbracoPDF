@@ -26,6 +26,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Main Content</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
 		global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.PublishedContent.IPublishedElement> MainContent { get; }
+
+		/// <summary>Pdf this page</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		bool PdfThisPage { get; }
 	}
 
 	/// <summary>Page Content</summary>
@@ -63,5 +67,16 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Main Content</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
 		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.PublishedContent.IPublishedElement> GetMainContent(IPageContent that) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.PublishedContent.IPublishedElement>>("mainContent");
+
+		///<summary>
+		/// Pdf this page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		[ImplementPropertyType("pdfThisPage")]
+		public bool PdfThisPage => GetPdfThisPage(this);
+
+		/// <summary>Static getter for Pdf this page</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		public static bool GetPdfThisPage(IPageContent that) => that.Value<bool>("pdfThisPage");
 	}
 }

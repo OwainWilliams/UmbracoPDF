@@ -57,5 +57,12 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
 		[ImplementPropertyType("mainContent")]
 		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.PublishedContent.IPublishedElement> MainContent => global::Umbraco.Web.PublishedModels.PageContent.GetMainContent(this);
+
+		///<summary>
+		/// Pdf this page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		[ImplementPropertyType("pdfThisPage")]
+		public bool PdfThisPage => global::Umbraco.Web.PublishedModels.PageContent.GetPdfThisPage(this);
 	}
 }

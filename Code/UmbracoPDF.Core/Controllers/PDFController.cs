@@ -2,6 +2,7 @@
 using Umbraco.Core;
 using Umbraco.Web.Mvc;
 
+
 namespace UmbracoPDF.Core.Controllers
 {
     
@@ -10,6 +11,8 @@ namespace UmbracoPDF.Core.Controllers
         [System.Web.Http.HttpPost]
         public ActionResult GeneratePDF(string fileName)
         {
+
+            var xpath = Umbraco.ContentSingleAtXPath("//pDFTemplate");
 
             // Added Umbraco.Core reference to allow to use IsNullOrWhiteSpace helper.
             if(fileName.IsNullOrWhiteSpace())
