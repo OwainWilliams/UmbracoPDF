@@ -101,5 +101,14 @@ This reads the text that is entered in the backoffice and displays it as a link 
 
 Success, we have the link that we created to test the PDF functionality and now we have the link that is created from Nested Content from the backoffice. The final step is to hook the two together. A link that creates a PDF, controlled by the backoffice.
 
+## PDF any page with a custom template
+
+The output of this next section is to have a custom template which renders a PDF of the page, however, it's not going to show the navigation, the footer or anything like that. The PDF will show only the content of the page withinn a specific div but allow for the PDF to be controlled via the backoffice e.g. add an advert, add some custom text, anything you want. 
+
+I've created a new `.cshtml` file which is just for the PDF. It's called `PDFTemplate.cshtml`. 
+The issue I had was, how do I pass the page content to a seperate view. For this, I used javascript. I look for a specific div id then store that information as a string of HTML and pass it to my new template view.
+
+Step 1. Get the content of a div and store it in local storage.
+Step 2. Place the information in to form, then pass this infomraiton to a controller.
 
 Code screenshots are by https://carbon.now.sh/
