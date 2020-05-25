@@ -1,17 +1,23 @@
 ﻿using System.Web.Mvc;
 using Umbraco.Core;
 using Umbraco.Web.Mvc;
-
+using UmbracoPDF.Core.Models;
 
 namespace UmbracoPDF.Core.Controllers
 {
     
     public class PDFController:SurfaceController
     {
-        [System.Web.Http.HttpPost]
-        public ActionResult GeneratePDF(string fileName)
+        [HttpPost]
+        public ActionResult GeneratePDF()
         {
+            
+          
 
+           var model = new PDFViewModel();
+
+            string fileName = "";
+            var PDFMeContent = Request.Form["PageData"];
             var xpath = Umbraco.ContentSingleAtXPath("//pDFTemplate");
 
             // Added Umbraco.Core reference to allow to use IsNullOrWhiteSpace helper.

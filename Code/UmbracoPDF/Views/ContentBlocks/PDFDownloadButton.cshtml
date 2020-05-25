@@ -1,33 +1,33 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<PDfdownloadButton>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbracoPDF.Core.Models.PDFViewModel>
+
+
 
 @{
     Layout = null;
 
-    var linkText = "DOWNLOAD";
+    var linkText = "Download this";
     var saveAsName = "TEST";
 
 }
 
-
-
 <div class="pdfButton">
-<button class="btn btnSecondary pdfDownload" onclick="downloadPdf();">Download PDF Version</button>
+    <button class="btn btnSecondary pdfDownload" onclick="downloadPdf();">Download PDF Version</button>
 
     <form id="frmCreatePDF" action="/umbraco/surface/PDF/GeneratePDF" method="post" style="display:none">
-        <input type="text" id="btnSendData" name="btnSendData" value="" />
+        @Html.TextBoxFor(m => m.formData, new { htmlAttributes = new { @class = "form-control" } })
     </form>
 
 </div>
 
-
-
 <script>
 
-    function downloadPdf() {
-        $("div.mainContent").not("div.pdfButton").text();
-        $("#frmCreatePDF").submit();
 
-        console.log(divHtml);
+    function downloadPdf() {
+        var content = document.getElementById("mainContent");
+        localStorage.setItem("pdfMe", content.innerHTML);
+
+        $(".form-control").val(JSON.stringify(localStorage));
+        $("#frmCreatePDF").submit();
 
     }
 

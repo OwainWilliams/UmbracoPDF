@@ -524,6 +524,7 @@
     <Content Include="Views\ContentBlocks\DisplayContentBlocks.cshtml" />
     <Content Include="Views\ContentBlocks\RichtextEditor.cshtml" />
     <Content Include="Views\ContentBlocks\PDFTemplate.cshtml" />
+    <Content Include="Views\PDFTemplate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
