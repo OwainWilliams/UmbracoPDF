@@ -15,18 +15,19 @@
 
 
 <div class="mainContent" id="mainContent">
-
     @if (Model.MainContent != null)
     {
-        @Html.Partial("ContentBlocks/DisplayContentBlocks", Model.MainContent)
+        @Html.Partial("ContentBlocks/DisplayContentBlocks", Model)
     }
 </div>
 
-@if (Model.PdfThisPage == true)
-{
-    <div class="pdfButton">
-        @Html.Partial("ContentBlocks/PDFDownloadButton", new UmbracoPDF.Core.Models.PDFViewModel(Model))
-    </div>
+@*
+    @if (Model.PdfThisPage == true)
+    {
+        <div class="pdfButton">
+            @Html.Partial("ContentBlocks/PDFDownloadButton", new MainContent())
+        </div>
 
 
-}
+    }
+*@

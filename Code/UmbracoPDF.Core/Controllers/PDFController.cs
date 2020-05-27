@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using Umbraco.Core;
 using Umbraco.Web.Mvc;
-using UmbracoPDF.Core.Models;
+using Umbraco.Web.PublishedModels;
 
 namespace UmbracoPDF.Core.Controllers
 {
@@ -11,11 +11,8 @@ namespace UmbracoPDF.Core.Controllers
         [HttpPost]
         public ActionResult GeneratePDF()
         {
+
             
-          
-
-           var model = new PDFViewModel();
-
             string fileName = "";
             var PDFMeContent = Request.Form["PageData"];
             var xpath = Umbraco.ContentSingleAtXPath("//pDFTemplate");
