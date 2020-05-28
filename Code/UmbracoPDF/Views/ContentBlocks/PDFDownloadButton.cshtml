@@ -18,10 +18,9 @@
         </form>
             *@
 
-        @using (Html.BeginForm("GeneratePDF", "PDF", FormMethod.Post))
+        @using (Html.BeginForm("GeneratePDF", "PDF", FormMethod.Post, new { id = "frmCreatePDF" }))
         {
             @Html.TextBoxFor(m => m.formData)
-            <input type="submit" value="@(Model.LinkText)" />
         } 
 
         </div>

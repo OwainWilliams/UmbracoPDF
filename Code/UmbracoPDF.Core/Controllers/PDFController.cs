@@ -5,9 +5,13 @@ using Umbraco.Web.PublishedModels;
 
 namespace UmbracoPDF.Core.Controllers
 {
-    
-    public class PDFController:SurfaceController
+
+    public class PDFController : SurfaceController
     {
+
+
+      
+
         [HttpPost]
         public ActionResult GeneratePDF(PDfdownloadButton content)
         {
@@ -30,5 +34,7 @@ namespace UmbracoPDF.Core.Controllers
             };
 
         }
+
+       
     }
 }
