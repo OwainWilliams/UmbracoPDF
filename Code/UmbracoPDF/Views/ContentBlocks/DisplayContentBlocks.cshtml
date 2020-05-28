@@ -7,7 +7,7 @@
         switch(contentBlock.ContentType.Alias)
         {
           case PDfdownloadButton.ModelTypeAlias:
-                @Html.Partial("ContentBlocks/PDFDownloadButton", new MainContent(contentBlock))
+                @Html.Partial("ContentBlocks/PDFDownloadButton", new PDfdownloadButton(contentBlock))
                 break;
 
             case RichtextEditor.ModelTypeAlias:

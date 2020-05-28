@@ -9,12 +9,12 @@ namespace UmbracoPDF.Core.Controllers
     public class PDFController:SurfaceController
     {
         [HttpPost]
-        public ActionResult GeneratePDF()
+        public ActionResult GeneratePDF(PDfdownloadButton content)
         {
 
+
+            string fileName = content.formData;
             
-            string fileName = "";
-            var PDFMeContent = Request.Form["PageData"];
             var xpath = Umbraco.ContentSingleAtXPath("//pDFTemplate");
 
             // Added Umbraco.Core reference to allow to use IsNullOrWhiteSpace helper.

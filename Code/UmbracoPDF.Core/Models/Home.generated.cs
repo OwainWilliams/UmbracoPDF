@@ -52,11 +52,11 @@ namespace Umbraco.Web.PublishedModels
 		public string PageTitle => this.Value<string>("pageTitle");
 
 		///<summary>
-		/// Main Content
+		/// Content  Block
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
-		[ImplementPropertyType("mainContent")]
-		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.PublishedContent.IPublishedElement> MainContent => global::Umbraco.Web.PublishedModels.PageContent.GetMainContent(this);
+		[ImplementPropertyType("contentBlock")]
+		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.PublishedContent.IPublishedElement> ContentBlock => global::Umbraco.Web.PublishedModels.PageContent.GetContentBlock(this);
 
 		///<summary>
 		/// Pdf this page

@@ -15,9 +15,9 @@
 
 
 <div class="mainContent" id="mainContent">
-    @if (Model.MainContent != null)
+    @if (Model.ContentBlock != null)
     {
-        @Html.Partial("ContentBlocks/DisplayContentBlocks", Model)
+        @Html.Partial("ContentBlocks/DisplayContentBlocks", Model.ContentBlock)
     }
 </div>
 

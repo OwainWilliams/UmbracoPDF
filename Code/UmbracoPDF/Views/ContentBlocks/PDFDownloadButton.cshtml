@@ -10,14 +10,21 @@
 
 }
 
-<div class="pdfButton">
-    <button class="btn btnSecondary pdfDownload" onclick="downloadPdf();">@Model.LinkText</button>
+    <div class="pdfButton">
+        <button class="btn btnSecondary pdfDownload" onclick="downloadPdf();">@Model.LinkText</button>
+        @*
+        <form id="frmCreatePDF" action="/umbraco/surface/PDF/GeneratePDF" method="post" style="display:none">
+            @Html.TextBoxFor(m => m.formData, new { htmlAttributes = new { @class = "form-control", @id = "form-control" } })
+        </form>
+            *@
 
-    <form id="frmCreatePDF" action="/umbraco/surface/PDF/GeneratePDF" method="post" style="display:none">
-        @Html.TextBoxFor(m => m.formData, new { htmlAttributes = new { @class = "form-control", @id="form-control" } })
-    </form>
+        @using (Html.BeginForm("GeneratePDF", "PDF", FormMethod.Post))
+        {
+            @Html.TextBoxFor(m => m.formData)
+            <input type="submit" value="@(Model.LinkText)" />
+        } 
 
-</div>
+        </div>
 
 <script>
 
