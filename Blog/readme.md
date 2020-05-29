@@ -111,4 +111,13 @@ The issue I had was, how do I pass the page content to a seperate view. For this
 Step 1. Get the content of a div and store it in local storage.
 Step 2. Place the information in to form, then pass this infomraiton to a controller.
 
+Step 3. Speak to lots of people about when to use a model, a partial viewmodel that inherits from another model or custom viewmodel. Then realized you might not need a model at all.
+
+So, the partial view is displaying my content correctly. I'm getting the CMS data from the umbraco generated models, what I want to now do it take the content of a div,pass it back to the controller and pdf it in a CMSd template.
+
+I may be able to do all that with parameters from ab form post action, no need for a model!!!
+
+
+
+
 Code screenshots are by https://carbon.now.sh/
