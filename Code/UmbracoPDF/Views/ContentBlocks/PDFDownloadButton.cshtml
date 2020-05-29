@@ -16,14 +16,18 @@
         <form id="frmCreatePDF" action="/umbraco/surface/PDF/GeneratePDF" method="post" style="display:none">
             @Html.TextBoxFor(m => m.formData, new { htmlAttributes = new { @class = "form-control", @id = "form-control" } })
         </form>
-            *@
+        *@
 
-        @using (Html.BeginForm("GeneratePDF", "PDF", FormMethod.Post, new { id = "frmCreatePDF" }))
+
+
+       
+
+        @using (Html.BeginForm("GeneratePDF", "PDF", FormMethod.Post, new { id = "frmCreatePDF", content = saveAsName }))
         {
             @Html.TextBoxFor(m => m.formData)
-        } 
+        }
 
-        </div>
+    </div>
 
 <script>
 

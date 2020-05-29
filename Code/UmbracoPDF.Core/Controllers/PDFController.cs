@@ -14,12 +14,13 @@ namespace UmbracoPDF.Core.Controllers
       
 
         [HttpPost]
-        public ActionResult GeneratePDF(PDfdownloadButtonViewModel content)
+        public ActionResult GeneratePDF(string name, string content)
         {
 
 
-            string fileName = content.formData;
-            
+            string fileName = name;
+            string log = content;
+
             var xpath = Umbraco.ContentSingleAtXPath("//pDFTemplate");
 
             // Added Umbraco.Core reference to allow to use IsNullOrWhiteSpace helper.
