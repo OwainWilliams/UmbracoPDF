@@ -69,6 +69,7 @@
     <Compile Include="Models\Member.generated.cs" />
     <Compile Include="Models\PageContent.generated.cs" />
     <Compile Include="Models\PDfdownloadButton.generated.cs" />
+    <Compile Include="Models\PDfDownloadViewModel.cs" />
     <Compile Include="Models\RichtextEditor.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

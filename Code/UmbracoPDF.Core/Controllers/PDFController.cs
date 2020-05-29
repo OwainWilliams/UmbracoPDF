@@ -2,6 +2,7 @@
 using Umbraco.Core;
 using Umbraco.Web.Mvc;
 using Umbraco.Web.PublishedModels;
+using UmbracoPDF.Core.Models;
 
 namespace UmbracoPDF.Core.Controllers
 {
@@ -13,7 +14,7 @@ namespace UmbracoPDF.Core.Controllers
       
 
         [HttpPost]
-        public ActionResult GeneratePDF(PDfdownloadButton content)
+        public ActionResult GeneratePDF(PDfdownloadButtonViewModel content)
         {
 
 
