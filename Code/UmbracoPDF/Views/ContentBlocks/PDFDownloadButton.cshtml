@@ -5,40 +5,32 @@
 @{
     Layout = null;
 
-    var linkText = "Download this";
-    var saveAsName = "TEST";
+   // Model.content = System.Web.HttpUtility.HtmlDecode(Model.content);
 
-}
-
-    <div class="pdfButton">
-        <button class="btn btnSecondary pdfDownload" onclick="downloadPdf();">@Model.LinkText</button>
-        @*
-        <form id="frmCreatePDF" action="/umbraco/surface/PDF/GeneratePDF" method="post" style="display:none">
-            @Html.TextBoxFor(m => m.formData, new { htmlAttributes = new { @class = "form-control", @id = "form-control" } })
-        </form>
-        *@
+   }
 
 
 
-       
-
-        @using (Html.BeginForm("GeneratePDF", "PDF", FormMethod.Post, new { id = "frmCreatePDF", content = saveAsName }))
+@* 
+    
+    All this button should do is, take the content of a div (eventually) and pass that data to the controller.
+    
+*@
+    <div id="pdfButton">
+  
+        @using (Html.BeginUmbracoForm("GeneratePDF", "PDF"))
         {
-            @Html.TextBoxFor(m => m.formData)
+           @Html.TextBox("content", System.Web.HttpUtility.HtmlEncode(Model.content), new { id = "pdfContent"})
+            <input type="submit" value="@Model.LinkText" />
         }
 
     </div>
+    
+    <script>
+        getContent();
 
-<script>
-
-
-    function downloadPdf() {
-        var content = document.getElementById("mainContent");
-        localStorage.setItem("pdfMe", content.innerHTML);
-
-        //$("#formData").val(JSON.stringify(localStorage));
-        $("#frmCreatePDF").submit();
-
-    }
-
-</script>
+        function getContent() {
+         
+            document.getElementById("pdfContent").value = document.getElementById("mainContent").innerHTML;
+        };
+    </script>

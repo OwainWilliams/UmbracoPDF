@@ -1,25 +1,27 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 using Umbraco.Core;
 using Umbraco.Web.Mvc;
 using Umbraco.Web.PublishedModels;
-using UmbracoPDF.Core.Models;
+
 
 namespace UmbracoPDF.Core.Controllers
 {
 
     public class PDFController : SurfaceController
     {
-
-
-      
-
+   
         [HttpPost]
-        public ActionResult GeneratePDF(string name, string content)
+        public ActionResult GeneratePDF(string content)
         {
+         
+            if(!ModelState.IsValid)
+            {
+                return CurrentUmbracoPage();
+            }
 
-
-            string fileName = name;
-            string log = content;
+            string fileName = content;
+            
 
             var xpath = Umbraco.ContentSingleAtXPath("//pDFTemplate");
 

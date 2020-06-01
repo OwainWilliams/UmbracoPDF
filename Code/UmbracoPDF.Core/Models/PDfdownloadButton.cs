@@ -23,7 +23,9 @@ namespace Umbraco.Web.PublishedModels
                 return this.LinkText;
             }
         }
-        public string formData { get; set; }
+       
+        [AllowHtml]
+        public string content { get; set; }
 
     }
 }
